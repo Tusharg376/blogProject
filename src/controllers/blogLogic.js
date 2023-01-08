@@ -91,7 +91,6 @@ const updateBlog = async function (req, res) {
     }
 }
 
-
 const deleteBlog = async function (req, res) {
     try {
         let blogId = req.params.blogId

@@ -18,3 +18,15 @@ router.delete("/blogs", validateToken, deleteByQuery)
 router.all("/*",function(req,res){res.status(404).send({status:false,msg:"Invalid HTTP request"})})
 
 module.exports = router
+
+/*
+const login = async function(req,res){
+    let data = req.body
+    let finalData = await authorModel.find({email:data.email,password:data.password})
+    let paylod = {authorId:finalData._id,email:finaldata.email}
+    let token = jwt.sign(paylod,"mySecret")
+    res.status(200).send({status:true,data:token})
+}
+
+
+*/
